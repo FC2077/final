@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WebsitePortfolio</title>
+
+  <style>
+    .bod {
+      background-color: #276472;
+    }
+
+    div.container {
+      width: 80%;
+      margin: 0 auto 0 auto;
+    }
+
+    .commission a {
+      display: block;
+      padding: 0px 0px;
+    }
+
+    .bananerlist a {
+      display: block;
+      padding: 0px 0px;
+    }
+
+    .name a {
+      display: block;
+      padding: 0px 0px;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    a:link {
+      text-decoration: none;
+    }
+
+    a:visited {
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: none;
+    }
+
+    a:active {
+      text-decoration: none;
+    }
+
+    .banner {
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .bannerlist {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size:x-large;
+    }
+
+    .sidebar {
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+
+    .mainimg {
+      font-family: fantasy;
+      font-size: large;
+      color: #ffebc6;
+    }
+
+    .banner {
+      position: relative;
+      text-align: center;
+      color: pink;
+    }
+
+    .comisfooter a{
+      display: block;
+      padding: 5px 5px;
+    }
+
+    .containerbot{
+      font-family: Arial, Helvetica, sans-serif;
+      text-align: center;
+      padding-top: 20px;
+    }
+
+    .comisfooter{
+      display: inline-block;
+      position: absolute;
+      left: 50%;
+      transform: translate(-50%);
+      background-color: #ffebc6;
+      width: auto;
+      line-height: 250%;
+      border: 5px solid black;
+      z-index: 1;
+    }
+
+    .comisfooter a{color: darkslategray;  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  font-weight: bold; color:#333;}
+
+  .comisfooter a:hover{color: #000;
+    background-color: #DC602E;}
+
+    .socialsfooter{
+      position: absolute;
+      list-style: none;
+      padding-top: 15%;
+      padding-bottom: 2%;
+      word-spacing: 1400%;
+      justify-content: space-evenly;
+      background-color: #333;
+      left: -5px;
+    }
+
+    .commission {
+      position: absolute;
+      top: 40px;
+      right: 5%;
+      background-color: #ffebc6;
+      width: 150px;
+      line-height: 3em;
+      border: 3px solid black;
+    }
+
+    .commission a{color: darkslategray;  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  transition: all 0.5s ease;}
+
+  .commission a:hover{color: #000;
+    background-color: #DC602E;}
+
+    .name {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      background-color: #ffebc6;
+      width: 350px;
+      line-height: 3em;
+      border: 5px solid black;
+    }
+
+    .name a{color: darkslategray;  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  transition: all 0.5s ease;}
+
+    .name a:hover{color: #000;
+    background-color: #DC602E;}
+
+
+    .bannerlist {
+      text-align: center;
+      list-style: none;
+      margin-top: -3.5px;
+      padding: 0%;
+      overflow: auto;
+      list-style-type: none;
+    }
+
+    .bananerlist {
+      display: inline-block;
+      width: 17%;
+      line-height: 3em;
+      border: 3px solid black;
+      background-color: #ffebc6;
+    }
+
+    .bananerlist a{color: darkslategrey;
+      -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  transition: all 0.5s ease;}
+
+    .bananerlist a:hover{color: #000;
+    background-color: #DC602E;}
+
+    .bananerlist.active a{font-weight: bold; color:#333}
+
+    .sidebar {
+      height: 750px;
+      width: 10%;
+      position: absolute;
+      right: 23px;
+      top: 20px;
+      padding-top: 40px;
+      background-color: #ffebc6;
+      border: 5px solid black;
+    }
+
+    .socials {
+      text-align: center;
+      list-style: none;
+      line-height: 5em;
+      padding: 5px;
+      margin-top: -50px;
+      word-spacing: 150%;
+    }
+
+    .mainimg img {
+      width: 100%;
+      border: 6px solid white;
+    }
+
+    .toppics {
+      display: flex;
+      justify-content: space-around;
+    }
+
+    .bottompics {
+      display: flex;
+      justify-content: space-around;
+    }
+
+
+    @media only screen and (min-width: 1100px){
+      .footer{display: none;}
+    }
+
+    @media only screen and (max-width: 1575px){
+
+    .sidebar{
+      width: 9%;
+      height: 1450px;
+    }
+    .socials{
+      line-height: auto;
+    }
+
+    .mainimg img {
+      width: 90%;
+      border: 6px solid white;
+    }
+
+    .toppics {
+      display: flex;
+      justify-content: space-around;
+    }
+
+    .bottompics {
+      display: flex;
+      justify-content: space-around;
+    }
+
+    }
+
+    @media only screen and (max-width: 1100px){
+    .bod {
+    background-color: #276472;
+    }
+
+    .sidebar{
+      display:none;
+    }
+
+    .commission{
+      display: none;
+    }
+
+    .name {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      background-color: #ffebc6;
+      width: 45%;
+      line-height: 2em;
+      border: 5px solid black;
+    }
+
+    .toppics {
+      position: relative;
+      left: 50%;
+      top: 100%;
+      transform: translate(-50%, 0%);
+      display: block;
+      justify-content: space-around;
+      width: 75%;
+    }
+
+    .bottompics {
+      position: relative;
+      left: 50%;
+      top: 100%;
+      transform: translate(-50%, 0%);
+      display: block;
+      justify-content: space-around;
+      width: 75%;
+    }
+
+    .bananerlist {
+      display: inline-block;
+      justify-content: space-between;
+      width: 46%;
+      line-height: 1.75em;
+      border: 3px solid black;
+      background-color: #ffebc6;
+    }
+    }
+
+    @media only screen and (max-width: 700px){
+    .bod {
+    background-color: #276472;
+    }
+
+    .socialsfooter{
+      padding-top: 100px;
+    }
+    .name{
+      font-size:medium;
+    }
+    }
+
+  </style>
+</head>
+
+<body class="bod">
+  <div class="container">
+    <div class="banner">
+      <header>
+        <h2>
+          <div class="commission">
+            <a href="commission.html">Commission</a>
+          </div>
+        </h2>
+        <h1>
+          <div class="name">
+            <a href="index.html">Artist's Name</a>
+          </div>
+        </h1>
+        <div class="bannerart">
+          <img src="Images/AmberlightArtworkBanner.png" alt="banner art of golden loops of light" style="width:95%">
+        </div>
+    </div>
+    </header>
+
+    <div class="BannerBar">
+      <nav class="general">
+        <ul class="bannerlist">
+          <li class="bananerlist">
+            <a href="index.html">Home</a>
+          </li>
+          <li class="bananerlist">
+            <a href="gallery.html">Gallery</a>
+          </li>
+          <li class="bananerlist">
+            <a href="contact.html">Contact</a>
+          </li>
+          <li class="bananerlist">
+            <a href="about.html">About</a>
+          </li>
+          <li class="bananerlist">
+            <a href="cv.html">CV</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <div class="sidebar">
+      <ul class="socials">
+        <li class="logo">
+          <h1>Follow</h1>
+          <a href="#"><img src="Images/InstagramBall.png" alt="Instagram Logo" style="width:64px;height:64px;"> </a>
+          <a href="#"><img src="Images/Art Station.png" alt="Art Station Logo" style="width:64px;height:64px;"> </a>
+          <a href="#"><img src="Images/BirdApp.png" alt="Twitter Logo" style="width:64px;height:64px;"> </a>
+          <a href="#"><img src="Images/DeviantArt.png" alt="DeviantArt Logo" style="width:64px;height:64px;"> </a>
+          <a href="#"><img src="Images/Discord.png" alt="Discord Logo" style="width:64px;height:64px;"> </a>
+          <a href="#"><img src="Images/Facebook.png" alt="Facebook Logo" style="width:64px;height:64px;"> </a>
+          <a href="#"><img src="Images/Linkedin.png" alt="Linkedin Logo" style="width:64px;height:64px;"> </a>
+          <a href="#"><img src="Images/Patreon.png" alt="Patreon Logo" style="width:64px;height:64px;"> </a>
+          <a href="#"><img src="Images/Pinterest.png" alt="Pinterest Logo" style="width:64px;height:64px;"> </a>
+          <a href="#"><img src="Images/RedBubble.png" alt="RedBubble Logo" style="width:64px;height:64px;"> </a>
+          <a href="#"><img src="Images/TikTok.png" alt="TikTok Logo" style="width:64px;height:64px;"> </a>
+          <a href="#"><img src="Images/Tumblr.png" alt="Tumblr Logo" style="width:64px;height:64px;"> </a>
+          <a href="#"><img src="Images/Twitch.png" alt="Twitch Logo" style="width:64px;height:64px;"> </a>
+          <a href="#"><img src="Images/Youtube.png" alt="Youtube Logo" style="width:64px;height:64px;"> </a>
+        </li>
+      </ul>
+    </div>
+
+    <main>
+      <div class="mainimg">
+        <div class="toppics">
+          <div class="topleft">
+            <p>Candles - December 2021</p>
+            <img src="Images/Candles.jpg" alt="A 3D rendering of Candles">
+          </div>
+
+          <div class="topright">
+            <p>Candle Shop - December 2022</p>
+            <img src="Images/CndlShop.jpg" alt="A 3D rendering of an ornamental candleshop">
+          </div>
+        </div>
+
+        <div class="bottompics">
+          <div class="bottomleft">
+            <p>Album Cover - September 2022</p>
+            <img src="Images/FwdAnon.jpg" alt="An album cover with smoke behind the head of a woman who's face is pixelated">
+          </div>
+
+          <div class="bottomright">
+            <p>Plushy - October 2022</p>
+            <img src="Images/Plush.jpg" alt="A 3D rendering of a starfish plushy">
+          </div>
+        </div>
+      </div>
+    </main>
+    
+  </div>
+  <div class="containerbot">
+    <footer>
+      <div class="footer">
+        <h2 class="comisfooter">
+          <a href="commission.html">Commission</a>
+        </h2>
+        <ul class="socialsfooter">
+          <li class="logofooter">
+           <a href="#"><img src="Images/InstagramBall.png" alt="Instagram Logo" style="width:64px;height:64px;"> </a>
+           <a href="#"><img src="Images/Art Station.png" alt="Art Station Logo" style="width:64px;height:64px;"> </a>
+            <a href="#"><img src="Images/BirdApp.png" alt="Twitter Logo" style="width:64px;height:64px;"> </a>
+            <a href="#"><img src="Images/DeviantArt.png" alt="DeviantArt Logo" style="width:64px;height:64px;"> </a>
+            <a href="#"><img src="Images/Discord.png" alt="Discord Logo" style="width:64px;height:64px;"> </a>
+            <a href="#"><img src="Images/Facebook.png" alt="Facebook Logo" style="width:64px;height:64px;"> </a>
+            <a href="#"><img src="Images/Linkedin.png" alt="Linkedin Logo" style="width:64px;height:64px;"> </a>
+            <a href="#"><img src="Images/Patreon.png" alt="Patreon Logo" style="width:64px;height:64px;"> </a>
+           <a href="#"><img src="Images/Pinterest.png" alt="Pinterest Logo" style="width:64px;height:64px;"> </a>
+           <a href="#"><img src="Images/RedBubble.png" alt="RedBubble Logo" style="width:64px;height:64px;"> </a>
+           <a href="#"><img src="Images/TikTok.png" alt="TikTok Logo" style="width:64px;height:64px;"> </a>
+           <a href="#"><img src="Images/Tumblr.png" alt="Tumblr Logo" style="width:64px;height:64px;"> </a>
+           <a href="#"><img src="Images/Twitch.png" alt="Twitch Logo" style="width:64px;height:64px;"> </a>
+            <a href="#"><img src="Images/Youtube.png" alt="Youtube Logo" style="width:64px;height:64px;"> </a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+  </div>
+</body>
+
+</html>
